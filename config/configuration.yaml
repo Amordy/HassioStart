@@ -17,6 +17,21 @@ introduction:
 # Enables the frontend
 frontend:
 
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      17: PIRLounge
+
+switch:
+  - platform: rpi_gpio
+    ports:
+      23: LED
+
+  - platform: broadlink
+    host: 192.168.0.37
+    mac: 'b4:43:0d:ee:fd:9a'
+    timeout: 15
+
 # Enables configuration UI
 config:
 # broadlink configuration
