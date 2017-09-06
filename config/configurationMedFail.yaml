@@ -20,6 +20,21 @@ frontend:
 # Alexa intergration - emulate hue hub
 emulated_hue:
 
+media_player:
+  - platform: webostv
+    host: 192.168.0.7
+    mac: cc:2d:8c:f7:6b:46
+    name: lounge_tv
+    timeout: 5
+    filename: webostv.conf
+    customize:
+      sources:
+        - livetv
+        - Sky
+        - Raspberry
+        - Kodibox
+        - netflix
+
 binary_sensor:
   - platform: rpi_gpio
     ports:
