@@ -2,14 +2,14 @@ homeassistant:
   # Name of the location where Home Assistant is running
   name: Home
   # Location required to calculate the time the sun rises and sets
-  latitude: 0
-  longitude: 0
+  latitude: 50.86
+  longitude: -1.4
   # Impacts weather/sunrise data (altitude above sea level in meters)
   elevation: 0
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: UTC
+  time_zone: GB
 
 # Show links to resources in log and frontend
 introduction:
@@ -24,6 +24,27 @@ binary_sensor:
   - platform: rpi_gpio
     ports:
       17: PIRLounge
+
+input_boolean:
+  test:
+    name: Test Trigger
+    initial: off
+    icon: mdi:car
+  loungedet:
+    name: Lounge Detected
+    initial: off
+
+input_select:
+  threat:
+    name: Threat level
+# A collection is used for options
+    options:
+     - 0
+     - 1
+     - 2
+     - 3
+    initial: 0
+
 
 switch:
   - platform: rpi_gpio
@@ -49,8 +70,8 @@ switch:
         friendly_name: "Lounge TV"
         command_on: 'sgU0AB8KHwsLHh8LCx4fCwsfCx4fCx4LHwsfCwsfHwsfCwsAATYfCx8KCx4fCh8LCh8KHx8LCx4AAAAA=='
         command_off: 'sg40AAseCx4fCgseHwsfCgseHwoLHx8KCx4LHh8KHwsfCgseCx8fCh8LCwABNh8LHwsLHx8KHwsAAAAA=='
-      kodi:
-        friendly_name: "Kodi"
+      lounge_kodi:
+        friendly_name: "Lounge Kodi"
         command_on: 'shI0AB8KHwoLHh8KHwoLHgseHwoLHh8KHwoLHh8KCx4fCgseCx4fCh8KHwofCh8KCx4fCgsAATUAAAAA=='
         command_off: 'sg00AB8LHwsLHx8KCx4fCgseDB4fCiAKIAoMHiAKCx4gCgsAATUgCh8KDB4fCh8KCx4LHh8LCx8AAAAA=='
       lounge_fan:
@@ -106,6 +127,8 @@ history:
 
 # View all events in a logbook
 logbook:
+  exclude:
+    entities: binary_sensor.pirlounge
 
 # Track the sun
 sun:
@@ -120,4 +143,16 @@ tts:
 
 group: !include groups.yaml
 automation: !include automations.yaml
+
+automation old:
+    alias: 'test turn on old1'
+    trigger:
+      platform: state
+      entity_id: input_boolean.test
+      from: 'off'
+      to: 'on'
+    action:
+      service: switch.turn_on
+      entity_id: switch.lounge_light
+
 script: !include scripts.yaml
