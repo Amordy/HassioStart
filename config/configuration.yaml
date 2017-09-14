@@ -12,7 +12,7 @@ homeassistant:
   time_zone: GB
 
 # Show links to resources in log and frontend
-introduction:
+#introduction:
 
 # Enables the frontend
 frontend:
@@ -118,6 +118,14 @@ updater:
 
 # Discover some devices automatically
 discovery:
+
+device_tracker:
+  - platform: sky_hub
+    host: 192.168.0.1
+    username: admin
+    password: !secret sky_password
+    consider_home: '120'
+    track_new_devices: yes
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
