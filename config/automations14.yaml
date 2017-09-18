@@ -27,7 +27,7 @@
   trigger:
     platform: sun
     event: sunset
-    offset: -00:45
+    offset: -00:30
   action:
     service: switch.turn_on
     entity_id: switch.lounge_light
@@ -59,17 +59,12 @@
     platform: state
     entity_id: binary_sensor.pirlounge
     to: 'on'
-
-
+    #entity_id: switch.lounge_light
+    #  state: on
   condition:
-    condition: and
-    conditions:
-      - condition: state
-        entity_id: switch.lounge_side_lamp
-        state: "off"
-      - condition: state
-        entity_id: switch.lounge_light
-        state: "on"
+    condition: state
+    entity_id: switch.lounge_side_lamp
+    state: 'off'
 
   action:
     service: switch.turn_on

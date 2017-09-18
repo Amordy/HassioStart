@@ -1,0 +1,144 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 50.86
+  longitude: -1.4
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 0
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: GB
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Alexa intergration - emulate hue hub
+emulated_hue:
+
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      17: PIRLounge
+
+input_boolean:
+  test:
+    name: Test Trigger
+    initial: off
+    icon: mdi:car
+
+input_select:
+  threat:
+    name: Threat level
+# A collection is used for options
+    options:
+     - 0
+     - 1
+     - 2
+     - 3
+    initial: 0
+
+
+switch:
+  - platform: rpi_gpio
+    ports:
+      23: LED
+
+  - platform: broadlink
+    host: 192.168.0.37
+    mac: 'b4:43:0d:ee:fd:9a'
+    timeout: 15
+    switches:
+      study_lamp:
+        friendly_name: "Study Lamp"
+        command_on: 'sgs0AB8LHwsLAAE6Cx8fCx8LHwsfCwsfHwsfCwsfHwsLHx8LCx8LHx8LHwsLHwsgHwsfCx8LHwsAAAAA=='
+        command_off: 'sgc0AAofHwsfCwsfHwsfCx8LCgABOgofHwsfCx8LHwsLHx8LHwsLHx8LCx8fCwofCx8fCx8LCh8AAAAA=='
+
+
+      lounge_sidelamp:
+        friendly_name: "Lounge Side Lamp"
+        command_on: 'shA0AB8KHwoLHh8KHwoLHgseHwsLHh8KHwoLHh8KCx4fCwseCx4fCh8KHwofCh8KHwofCgsAATUAAAAA=='
+        command_off: 'sh00AB8LCh8fCgseHwsLHwsfHwofCh8KCx8fCh8LHwsLAAE2HwsfCwofHwsfCgseCx4fCwsfHwoAAAAA=='
+      lounge_tv:
+        friendly_name: "Lounge TV"
+        command_on: 'sgU0AB8KHwsLHh8LCx4fCwsfCx4fCx4LHwsfCwsfHwsfCwsAATYfCx8KCx4fCh8LCh8KHx8LCx4AAAAA=='
+        command_off: 'sg40AAseCx4fCgseHwsfCgseHwoLHx8KCx4LHh8KHwsfCgseCx8fCh8LCwABNh8LHwsLHx8KHwsAAAAA=='
+      lounge_kodi:
+        friendly_name: "Lounge Kodi"
+        command_on: 'shI0AB8KHwoLHh8KHwoLHgseHwoLHh8KHwoLHh8KCx4fCgseCx4fCh8KHwofCh8KCx4fCgsAATUAAAAA=='
+        command_off: 'sg00AB8LHwsLHx8KCx4fCgseDB4fCiAKIAoMHiAKCx4gCgsAATUgCh8KDB4fCh8KCx4LHh8LCx8AAAAA=='
+      lounge_fan:
+        friendly_name: "Lounge Fan"
+        command_on: 'sgc0AAsfCh8eCgsfHwsfCwsfHgsLHx8LCh8KHx8LHgsfCx8LHgsfCwsfCgABNx4LHwsKHx8LHgsAAAAA=='
+        command_off: 'shk0AB8LCx4fCh8KCx4LAAE2HwofCgseHwofCgseCx4fCgseHwofCgseHwoLHh8KCx4LHx8KHwoAAAAA=='
+
+      main_bedroom_sidelamp:
+        friendly_name: "Main Bedroom Side Lamp"
+        command_on: 'sg80AAofHgsKHwofHgweCx4LHgseCx4LHgsKAAE1HgsKHx4LCh8eCwofHgsKHx4LHgseCx4LCh8AAAAA=='
+        command_off: 'sg80AB8LHgseCx4LCh8KHx4LCh8KHx8LHwseCwofHgseCx4LCgABNh4LCx8eCwofHgsKHx4LCh8AAAAA=='
+      main_bedroom_tv:
+        friendly_name: "Main Bedroom TV"
+        command_on: 'shY0AAofHgseCwoAATYfCwsfHgsKHx4LCh4eCwsfHgsfCx8LHwsKHwofHgsKHwsfHwsfCx8LHgsAAAAA=='
+        command_off: 'shs0AB8KHwoLHgseHwofCgsAATUfCgseHwoLHh8KCx4fCgseHwofCh8KHwoLHgseHwoLHgseHwoAAAAA=='
+      main_bedroom_charging:
+        friendly_name: "Main Bedroom Charging"
+        command_on: 'sgw0AB4LHgseCx8LCh8eCwoAATYeCwofHgsKHx8LCh8eCwofHgseCx4LHwsLHwofHgsKHwofHgsAAAAA=='
+        command_off: 'sgw0AB4LCgABNh8KCx4eCwofHwoLHh4LCh8eCx8LHwofCwoeCx4fCwofCx4fCh4LHgsKHx4LCx4AAAAA=='
+      main_bedroom_fan:
+        friendly_name: "Main Bedroom Fan"
+        command_on: 'sgs0AB4LHgsKHwoAATUfCwsfHgsKHx4LCh8eCwofHgseCx8LHwsLHwofHgsKHwsfHgseCx4LHgsAAAAA=='
+        command_off: 'shA0AAofHgseCwsfCwABNh4LCh8eCwofHgsKHx4LCh8eCx4LHgseCwofCh8fCwsfCh8fCx4LHgsAAAAA=='
+
+
+# Enables configuration UI
+config:
+# broadlink configuration
+
+http:
+  # Uncomment this to add a password (recommended!)
+  # api_password: PASSWORD
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+  exclude:
+    entities: binary_sensor.pirlounge
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google
+
+group: !include groups.yaml
+automation: !include automations.yaml
+automation old: !include automations_old.yaml
+script: !include scripts.yaml
