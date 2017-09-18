@@ -1,0 +1,21 @@
+2017-09-03 13:19:30 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-09-03 13:19:35 WARNING (MainThread) [homeassistant.setup] Setup of tts is taking over 10 seconds.
+2017-09-03 13:19:41 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 13:20:07 WARNING (SyncWorker_12) [netdisco.ssdp] Error fetching description at http://192.168.0.1:1990/WFADevice.xml
+2017-09-03 13:20:12 WARNING (SyncWorker_12) [netdisco.ssdp] Error fetching description at http://192.168.0.1:5431/dyndev/uuid:c03e0f51-82d0-d082-510f-3ec03e51d00000
+2017-09-03 13:20:13 WARNING (SyncWorker_12) [netdisco.ssdp] Found malformed XML at http://192.168.0.5:49153/description0.xml: 
+2017-09-03 13:20:13 WARNING (SyncWorker_12) [netdisco.ssdp] Found malformed XML at http://192.168.0.5:49153/description1.xml: 
+2017-09-03 13:20:13 WARNING (SyncWorker_12) [netdisco.ssdp] Found malformed XML at http://192.168.0.5:49153/description3.xml: 
+2017-09-03 13:20:31 WARNING (MainThread) [homeassistant.setup] Setup of wemo is taking over 10 seconds.
+2017-09-03 13:20:36 WARNING (SyncWorker_5) [pywemo.ssdp] Error fetching description at http://192.168.0.1:5431/dyndev/uuid:c03e0f51-82d0-d082-510f-3ec03e51d00000
+2017-09-03 13:34:46 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 13:49:52 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 14:04:45 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 14:19:38 ERROR (MainThread) [homeassistant.components.updater] Could not contact Home Assistant Update to check for updates
+2017-09-03 14:19:51 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 14:34:57 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 14:50:03 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 15:04:45 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 15:19:51 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 15:34:57 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]
+2017-09-03 15:50:03 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno -3] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Try again]

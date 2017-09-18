@@ -1,0 +1,180 @@
+
+android98dd7fa6e7e776b9:
+  hide_if_away: false
+  icon:
+  mac: 0C:B3:19:2A:3B:FB
+  name: Andy
+  picture: "/local/www/AndyM.jpg"
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+09aa01ac26160fj3:
+  hide_if_away: false
+  icon:
+  mac: 18:B4:30:7D:A4:D3
+  name: 09AA01AC26160FJ3
+  picture:
+  track: false
+  vendor: Nest Labs Inc.
+
+npi7be21f:
+  hide_if_away: false
+  icon:
+  mac: 08:3E:8E:7B:E2:1F
+  name: NPI7BE21F
+  picture:
+  track: false
+  vendor: Hon Hai Precision Ind. Co.,Ltd.
+
+unknown_2:
+  hide_if_away: false
+  icon:
+  mac: 14:91:82:03:AA:E9
+  name: UNKNOWN
+  picture:
+  track: false
+  vendor: Belkin International Inc.
+
+skyhd:
+  hide_if_away: false
+  icon:
+  mac: 00:19:FB:E8:E5:0A
+  name: SKY+HD
+  picture:
+  track: false
+  vendor: BSkyB Ltd
+
+androidf8e94625cad06173:
+  hide_if_away: false
+  icon:
+  mac: 84:55:A5:85:A6:5F
+  name: Jane
+  picture: '/local/www/JaneM.JPG'
+  track: true
+  vendor: Samsung Electronics Co.,Ltd
+
+unknown_3:
+  hide_if_away: false
+  icon:
+  mac: 88:71:E5:2D:4B:B3
+  name: UNKNOWN
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+broadlink_rmpropluseefd9a:
+  hide_if_away: false
+  icon:
+  mac: B4:43:0D:EE:FD:9A
+  name: Broadlink RMPROPLUS-ee-fd-9a
+  picture:
+  track: false
+  vendor: Broadlink Pty Ltd
+
+ix4300d:
+  hide_if_away: false
+  icon:
+  mac: 00:D0:B8:24:8F:91
+  name: IX4-300D
+  picture:
+  track: false
+  vendor: Iomega Corporation
+
+amazonfd482e890:
+  hide_if_away: false
+  icon:
+  mac: 68:54:FD:49:E0:8C
+  name: amazon-fd482e890
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+unknown:
+  hide_if_away: false
+  icon:
+  mac: 14:91:82:04:69:71
+  name: UNKNOWN
+  picture:
+  track: false
+  vendor: Belkin International Inc.
+
+raspberrypi:
+  hide_if_away: false
+  icon:
+  mac: B8:27:EB:86:8D:F6
+  name: raspberrypi
+  picture:
+  track: false
+  vendor: Raspberry Pi Foundation
+
+android6e3ea651adbfb814:
+  hide_if_away: false
+  icon:
+  mac: 48:88:CA:DF:37:67
+  name: android-6e3ea651adbfb814
+  picture:
+  track: false
+  vendor: Motorola (Wuhan) Mobility Technologies Communication Co., Ltd.
+
+andyasguard:
+  hide_if_away: false
+  icon:
+  mac: 50:E5:49:9E:4A:C4
+  name: Andy-Asguard
+  picture:
+  track: false
+  vendor: unknown
+
+unknown_4:
+  hide_if_away: false
+  icon:
+  mac: CC:2D:8C:F7:6B:46
+  name: UNKNOWN
+  picture:
+  track: false
+  vendor: LG ELECTRONICS INC
+
+androidc7702f8d71ba35ce:
+  hide_if_away: false
+  icon:
+  mac: 28:3F:69:59:6B:4B
+  name: Sophie
+  picture:
+  track: true
+  vendor: Sony Mobile Communications AB
+
+desktop6sva53p:
+  hide_if_away: false
+  icon:
+  mac: 98:5F:D3:E5:BD:14
+  name: DESKTOP-6SVA53P
+  picture:
+  track: false
+  vendor: Microsoft Corporation
+
+sophiepc:
+  hide_if_away: false
+  icon:
+  mac: E8:03:9A:FF:14:E8
+  name: Sophie-PC
+  picture:
+  track: false
+  vendor: Samsung Electronics Co.,Ltd
+
+android8a4a87dd55696fc4:
+  hide_if_away: false
+  icon:
+  mac: 80:D2:1D:3F:5A:D1
+  name: android-8a4a87dd55696fc4
+  picture:
+  track: true
+  vendor: AzureWave Technology Inc.
+
+android70fa92b2a228e37c:
+  hide_if_away: false
+  icon:
+  mac: C4:2F:AE:22:67:07
+  name: android-70fa92b2a228e37c
+  picture:
+  track: true
+  vendor: unknown

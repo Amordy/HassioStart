@@ -1,0 +1,30 @@
+# this is the file for automations
+
+  - id: '1504626744268'
+    alias: Turn on lounge lights
+
+    trigger:
+      - platform: sun
+        event: sunset
+        offset: -00:30
+
+    condition: []
+
+    action:
+      - service: switch.turn_on
+        entity_id: lounge_side_lamp
+
+
+  - id: '1504729527077'
+    alias: lamp on at dawn
+
+    trigger:
+      - platform: sun
+        event: sunrise
+        offset: -00:10
+
+    condition: []
+
+    action:
+      - service: Switch.turn_on
+        entity_id: main_bedroom_side_lamp

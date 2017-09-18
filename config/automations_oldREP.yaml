@@ -1,0 +1,22 @@
+- id: '1504800748710'
+  alias: 'test turn on old1'
+  trigger:
+    platform: state
+    entity_id: input_boolean.test
+    from: 'off'
+    to: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.led
+
+- id: 'test trigger to change a state'
+  alias: 'test to change state old2'
+  trigger:
+    platform: state
+    entity_id: input_boolean.test
+    from: 'off'
+    to: 'on'
+  action:
+    service: input_select.select_option
+    entity_id: input_select.threat
+    option: "2"
